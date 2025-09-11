@@ -4,6 +4,4 @@
 colorama
 
 ### Install
-python -m venv venv
-source venv/bin/activate
-pip install colorama
+python -m venv venv && source venv/bin/activate && pip install colorama
