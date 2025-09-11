@@ -31,8 +31,6 @@ def main():
             if os.path.isdir(dir[0]):
                 shutil.copytree(dir[0], dest, dirs_exist_ok=True)
 
-            sleep(1000)
-
         shutil.make_archive(f"backup-{date.today().isoformat()}", "zip", tmpdir)
 
 if __name__ == "__main__":
