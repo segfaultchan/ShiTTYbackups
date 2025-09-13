@@ -12,3 +12,4 @@ python -m venv venv
 ./venv/bin/pipx install .
 ```
 also u need .local/bin directory in $PATH
+```export PATH="$HOME/.local/bin:$PATH"``` to your shell config
