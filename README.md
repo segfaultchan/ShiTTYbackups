@@ -1,7 +1,12 @@
 ## Util for backups on python
 
 ### Requirements
-colorama
+python
 
 ### Install
-python -m venv venv && source venv/bin/activate && pip install -r requirements.txt
+```
+python -m venv venv
+./venv/bin/pip install pipx
+./venv/bin/pipx install .
+```
+also u need .local/bin directory in $PATH

@@ -60,7 +60,7 @@ def excepts_delete():
             continue
 
 def archive():
-    shutil.make_archive(base_name=arch_name,format=arch_format,root_dir="./")
+    shutil.make_archive(base_name=arch_name,format=arch_format,root_dir=arch_dir)
     
 def final():
     shutil.rmtree(arch_dir)
