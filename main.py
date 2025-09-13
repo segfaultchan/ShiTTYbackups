@@ -1,6 +1,5 @@
 import shutil #, sys
 from pathlib import Path
-from sys import exception
 from colorama import Fore
 
 # archive
@@ -17,8 +16,8 @@ dirs = [
 files = [
     ["~/.zshrc","dotfiles/zshrc"]
 ]
-# exceptions
-exceptions = ["config/discord",]
+# exclude paths
+exclude = ["config/discord",]
 
 #def args_check():
 #    args = sys.argv[1:]
@@ -53,7 +52,7 @@ def file_backup():
             print(Fore.RED,"u must write a path/to/file to files",Fore.WHITE)
 
 def excepts_delete():
-    for x in exceptions:
+    for x in exclude:
         try:
             shutil.rmtree(arch_dir+x)
         except FileNotFoundError as error:
@@ -67,6 +66,7 @@ def final():
     shutil.rmtree(arch_dir)
 
 def main():
+# function stack
 #    args_check()
     dir_backup()
     file_backup()
